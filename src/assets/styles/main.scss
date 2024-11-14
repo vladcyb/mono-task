@@ -1,0 +1,34 @@
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  /* colors */
+  --c-primary: #bf2738;
+  --c-hover: #cc2a3c;
+  --c-active: #991f2d;
+  --c-link: #f23147;
+  --c-text-primary: #262633;
+  --c-text-secondary: #797986;
+  --c-lines: #eaeaea;
+  --c-white: #fff;
+  --c-black: #000;
+
+  /* border-radius */
+  --br-large: 30px;
+  --br-small: 14px;
+
+  --content-width: 1290px;
+}
+
+body {
+  font-family: 'Golos Text', sans-serif;
+}
+
+button:not(:disabled) {
+  cursor: pointer;
+}

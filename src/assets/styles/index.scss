@@ -1,7 +1,4 @@
-*,
-*::after,
-*::before {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
+@use '../fonts/index';
+@use './main';
+@use './header';
+@use './buttons';
