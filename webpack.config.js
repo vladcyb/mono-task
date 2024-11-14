@@ -1,6 +1,7 @@
 const path = require('path')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 const { CleanWebpackPlugin } = require('clean-webpack-plugin')
+const ESLintWebpackPlugin = require('eslint-webpack-plugin')
 
 module.exports = {
   entry: {
@@ -16,6 +17,7 @@ module.exports = {
       filename: 'index.html',
     }),
     new CleanWebpackPlugin(),
+    new ESLintWebpackPlugin(),
   ],
   module: {
     rules: [
