@@ -6,16 +6,18 @@
         <li class="header__nav-item">
           <a class="header__nav-item-link" href="#">Упаковка </a>
         </li>
-        <li class="header__nav-item">
+        <li class="header__nav-item header__nav-item_equip">
           <a class="header__nav-item-link" href="#">Оборудование</a>
         </li>
-        <li class="header__nav-item">
+        <li class="header__nav-item header__nav-item_service">
           <a class="header__nav-item-link" href="#">Сервис и запчасти</a>
         </li>
       </ul>
     </nav>
   </div>
-  <%- include('../assets/img/logo.svg', { w: 106, h: 64 }) %>
+  <!-- prettier-ignore -->
+  <%- include('../assets/img/logo.svg', { className: 'header__logo', w: 106, h: 64 }) %>
+  <img class="header__logo-bw" src="../assets/img/logo-bw.png" alt="" />
   <div class="header__right">
     <button class="header__stat-btn"></button>
     <button class="header__loupe-btn"></button>

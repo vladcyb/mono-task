@@ -1,3 +1,5 @@
+@use 'utils/breakpoints' as breakpoints;
+
 *,
 *::after,
 *::before {
@@ -23,6 +25,7 @@
   --br-large: 30px;
   --br-small: 14px;
 
+  /* sizes */
   --content-width: 1290px;
 }
 
@@ -43,31 +46,4 @@ h5,
 h6 {
   text-transform: uppercase;
   font-family: 'RoadRadio', sans-serif;
-}
-
-h1 {
-  font-size: 46px;
-  line-height: 100%;
-}
-
-h2 {
-  font-size: 36px;
-  line-height: 110%;
-}
-
-h3 {
-  font-size: 30px;
-  font-weight: 500;
-  line-height: 130%;
-}
-
-h4 {
-  font-size: 26px;
-  line-height: 120%;
-}
-
-h5 {
-  font-size: 24px;
-  font-weight: 500;
-  line-height: 130%;
 }

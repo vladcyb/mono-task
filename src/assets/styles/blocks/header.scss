@@ -1,3 +1,6 @@
+@use '../utils/breakpoints' as breakpoints;
+@use '../utils/mixins' as mixins;
+
 .header {
   background: var(--c-white);
   height: 92px;
@@ -5,7 +8,15 @@
   align-items: center;
   justify-content: space-between;
   padding: 0 calc((100% - var(--content-width)) / 2);
-  background: var(--c-white);
+
+  @include mixins.media-md {
+    padding: 0 28px;
+    height: 65px;
+  }
+
+  @include mixins.media-sm {
+    padding: 0 16px;
+  }
 }
 
 .header__left,
@@ -23,10 +34,6 @@
   justify-content: flex-end;
 }
 
-.header__burger-wrapper {
-  //flex: 1;
-}
-
 .header__burger {
   background: url("data:image/svg+xml,%3Csvg width='32' height='12' viewBox='0 0 32 12' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M1 0C0.447715 0 0 0.447715 0 1C0 1.55228 0.447715 2 1 2H31C31.5523 2 32 1.55228 32 1C32 0.447715 31.5523 0 31 0H1ZM1 10C0.447715 10 0 10.4477 0 11C0 11.5523 0.447715 12 1 12H16C16.5523 12 17 11.5523 17 11C17 10.4477 16.5523 10 16 10H1Z' fill='%23262633'/%3E%3C/svg%3E%0A")
     center no-repeat;
@@ -41,6 +48,14 @@
   align-items: center;
   flex: 1;
   margin-left: 59px;
+
+  @include mixins.media-md {
+    margin-left: 48px;
+  }
+
+  @include mixins.media-sm {
+    display: none;
+  }
 }
 
 .header__nav-ul {
@@ -49,7 +64,7 @@
 }
 
 .header__nav-item:not(:last-child) {
-  margin-right: 46px;
+  margin-right: 30px;
 }
 
 .header__stat-btn,
@@ -76,6 +91,37 @@
   flex-direction: column;
   justify-content: center;
   margin: 0 59px;
+
+  @include mixins.media-md {
+    margin: 0 0 0 48px;
+  }
+
+  @include mixins.media-sm {
+    display: none;
+  }
+}
+
+.header__logo {
+  @include mixins.media-md {
+    display: none;
+  }
+
+  @include mixins.media-sm {
+    display: inline-block;
+    height: 40px;
+  }
+}
+
+.header__logo-bw {
+  display: none;
+
+  @include mixins.media-md {
+    display: inline-block;
+  }
+
+  @include mixins.media-sm {
+    display: none;
+  }
 }
 
 .header__phone {
@@ -84,6 +130,7 @@
   text-decoration: none;
   margin-bottom: 6px;
   font-size: 15px;
+  line-height: 18px;
 }
 
 .header__email {
@@ -91,9 +138,23 @@
   font-weight: 400;
   text-decoration: none;
   font-size: 13px;
+  line-height: 16px;
 }
 
 .header__nav-item-link {
   color: var(--c-text-primary);
   text-decoration: none;
+}
+
+.header__nav-item_service,
+.header__request {
+  @include mixins.media-md {
+    display: none;
+  }
+}
+
+@include mixins.media(810px) {
+  .header__nav-item_equip {
+    display: none;
+  }
 }

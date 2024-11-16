@@ -1,11 +1,12 @@
+@use './main';
+@use 'headings';
+
 // fonts
 @use '../fonts/index';
 
 // utils
 @use 'utils/buttons';
 
-@use './main';
-
-// components
-@use 'components/header';
-@use 'components/page-header';
+// blocks
+@use 'blocks/header';
+@use 'blocks/page-header';

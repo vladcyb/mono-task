@@ -1,0 +1,19 @@
+@use 'breakpoints' as *;
+
+@mixin media-md {
+  @media (max-width: map-get($breakpoints, md)) {
+    @content;
+  }
+}
+
+@mixin media-sm {
+  @media (max-width: map-get($breakpoints, sm)) {
+    @content;
+  }
+}
+
+@mixin media($custom-breakpoint) {
+  @media (max-width: $custom-breakpoint) {
+    @content;
+  }
+}

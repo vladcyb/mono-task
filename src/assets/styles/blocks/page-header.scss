@@ -1,3 +1,6 @@
+@use '../utils/breakpoints' as breakpoints;
+@use '../utils/mixins' as mixins;
+
 .page-header {
   background: var(--c-light-bg);
 }
@@ -5,6 +8,10 @@
 .page-header__nav {
   height: 60px;
   border-bottom: 1px solid var(--c-lines);
+
+  @include mixins.media-md {
+    height: 48px;
+  }
 }
 
 .page-header__nav-ul {
@@ -42,4 +49,12 @@
   justify-content: center;
   align-items: center;
   height: 100px;
+
+  @include mixins.media-md {
+    height: 62px;
+  }
+
+  @include mixins.media-sm {
+    height: 66px;
+  }
 }
