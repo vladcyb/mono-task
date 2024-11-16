@@ -1,4 +1,28 @@
 <header class="header">
-  <button class="header__burger"></button>
-  <button class="header__request btn btn_primary">Оставить заявку</button>
+  <div class="header__left">
+    <button class="header__burger"></button>
+    <nav class="header__nav">
+      <ul class="header__nav-ul">
+        <li class="header__nav-item">
+          <a class="header__nav-item-link" href="#">Упаковка </a>
+        </li>
+        <li class="header__nav-item">
+          <a class="header__nav-item-link" href="#">Оборудование</a>
+        </li>
+        <li class="header__nav-item">
+          <a class="header__nav-item-link" href="#">Сервис и запчасти</a>
+        </li>
+      </ul>
+    </nav>
+  </div>
+  <%- include('../assets/img/logo.svg', { w: 106, h: 64 }) %>
+  <div class="header__right">
+    <button class="header__stat-btn"></button>
+    <button class="header__loupe-btn"></button>
+    <div class="header__contacts">
+      <a class="header__phone" href="tel:+74991361718">+7 (499) 136-17-18</a>
+      <a class="header__email" href="mailto:info@monevac.ru">info@monevac.ru</a>
+    </div>
+    <button class="header__request btn btn_primary">Оставить заявку</button>
+  </div>
 </header>

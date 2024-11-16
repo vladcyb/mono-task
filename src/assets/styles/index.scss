@@ -1,4 +1,11 @@
+// fonts
 @use '../fonts/index';
+
+// utils
+@use 'utils/buttons';
+
 @use './main';
-@use './header';
-@use './buttons';
+
+// components
+@use 'components/header';
+@use 'components/page-header';
