@@ -1,0 +1,22 @@
+@use '../utils/mixins';
+
+.input {
+  font-size: 16px;
+  line-height: 24px;
+  font-family: 'Golos Text', sans-serif;
+  padding: 18px 20px;
+  background: var(--c-light-bg);
+  border: 0;
+  border-radius: 14px;
+  height: 52px;
+}
+
+.textarea {
+  font-size: 16px;
+  line-height: 24px;
+  font-family: 'Golos Text', sans-serif;
+  padding: 18px 20px;
+  background: var(--c-light-bg);
+  border: 0;
+  border-radius: 14px;
+}

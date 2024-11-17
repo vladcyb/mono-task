@@ -6,7 +6,10 @@
 
 // utils
 @use 'utils/buttons';
+@use 'utils/inputs';
+@use 'utils/checkboxes';
 
 // blocks
 @use 'blocks/header';
 @use 'blocks/page-header';
+@use 'blocks/contacts';
