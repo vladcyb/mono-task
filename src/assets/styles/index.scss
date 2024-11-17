@@ -1,7 +1,15 @@
-*,
-*::after,
-*::before {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
+@use './main';
+@use 'headings';
+
+// fonts
+@use '../fonts/index';
+
+// utils
+@use 'utils/buttons';
+@use 'utils/inputs';
+@use 'utils/checkboxes';
+
+// blocks
+@use 'blocks/header';
+@use 'blocks/page-header';
+@use 'blocks/contacts';

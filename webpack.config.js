@@ -1,5 +1,5 @@
 const path = require('path')
-const HtmlWebpackPlugin = require('html-webpack-plugin')
+const HtmlBundlerPlugin = require('html-bundler-webpack-plugin')
 const { CleanWebpackPlugin } = require('clean-webpack-plugin')
 const ESLintWebpackPlugin = require('eslint-webpack-plugin')
 
@@ -12,9 +12,14 @@ module.exports = {
     filename: '[contenthash].[name].js',
   },
   plugins: [
-    new HtmlWebpackPlugin({
-      template: path.resolve(__dirname, './src/template.html'),
-      filename: 'index.html',
+    new HtmlBundlerPlugin({
+      entry: {
+        index: {
+          import: './src/templates/index.html',
+          data: {},
+        },
+      },
+      preprocessor: 'ejs',
     }),
     new CleanWebpackPlugin(),
     new ESLintWebpackPlugin(),
@@ -36,7 +41,7 @@ module.exports = {
       },
       {
         test: /\.(scss|css)$/,
-        use: ['style-loader', 'css-loader', 'sass-loader'],
+        use: ['css-loader', 'sass-loader'],
       },
     ],
   },

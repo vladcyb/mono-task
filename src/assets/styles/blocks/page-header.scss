@@ -1,0 +1,60 @@
+@use '../utils/breakpoints' as breakpoints;
+@use '../utils/mixins' as mixins;
+
+.page-header {
+  background: var(--c-light-bg);
+}
+
+.page-header__nav {
+  height: 60px;
+  border-bottom: 1px solid var(--c-lines);
+
+  @include mixins.media-md {
+    height: 48px;
+  }
+}
+
+.page-header__nav-ul {
+  list-style-type: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  font-size: 12px;
+}
+
+.page-header__nav-a {
+  color: #c9c9cf;
+  text-decoration: none;
+}
+
+.page-header__nav-a_active {
+  color: var(--c-text-secondary);
+}
+
+.page-header__nav-li:not(:last-child)::after {
+  content: '';
+  display: inline-block;
+  position: relative;
+  bottom: 2px;
+  margin: 0 8px;
+  width: 2px;
+  height: 2px;
+  border-radius: 50%;
+  background: #797986;
+}
+
+.page-header__title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100px;
+
+  @include mixins.media-md {
+    height: 62px;
+  }
+
+  @include mixins.media-sm {
+    height: 66px;
+  }
+}

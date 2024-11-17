@@ -1,0 +1,81 @@
+@use 'utils/mixins' as mixins;
+
+h1 {
+  font-size: 46px;
+  line-height: 100%;
+  font-weight: 400;
+
+  @include mixins.media-md {
+    font-size: 32px;
+    line-height: 100%;
+  }
+
+  @include mixins.media-sm {
+    font-size: 22px;
+    line-height: 100%;
+  }
+}
+
+h2 {
+  font-size: 36px;
+  line-height: 110%;
+  font-weight: 400;
+
+  @include mixins.media-md {
+    font-size: 28px;
+    line-height: 120%;
+  }
+
+  @include mixins.media-sm {
+    font-size: 22px;
+    line-height: 100%;
+  }
+}
+
+h3 {
+  font-size: 30px;
+  line-height: 130%;
+  font-weight: 500;
+
+  @include mixins.media-md {
+    font-size: 26px;
+    line-height: 130%;
+  }
+
+  @include mixins.media-sm {
+    font-size: 20px;
+    line-height: 100%;
+  }
+}
+
+h4 {
+  font-size: 26px;
+  line-height: 120%;
+  font-weight: 400;
+
+  @include mixins.media-md {
+    font-size: 24px;
+    line-height: 130%;
+  }
+
+  @include mixins.media-sm {
+    font-size: 18px;
+    line-height: 110%;
+  }
+}
+
+h5 {
+  font-size: 24px;
+  line-height: 130%;
+  font-weight: 500;
+
+  @include mixins.media-md {
+    font-size: 22px;
+    line-height: 130%;
+  }
+
+  @include mixins.media-sm {
+    font-size: 20px;
+    line-height: 130%;
+  }
+}

@@ -1,0 +1,30 @@
+<header class="header">
+  <div class="header__left">
+    <button class="header__burger"></button>
+    <nav class="header__nav">
+      <ul class="header__nav-ul">
+        <li class="header__nav-item">
+          <a class="header__nav-item-link" href="#">Упаковка </a>
+        </li>
+        <li class="header__nav-item header__nav-item_equip">
+          <a class="header__nav-item-link" href="#">Оборудование</a>
+        </li>
+        <li class="header__nav-item header__nav-item_service">
+          <a class="header__nav-item-link" href="#">Сервис и запчасти</a>
+        </li>
+      </ul>
+    </nav>
+  </div>
+  <!-- prettier-ignore -->
+  <%- include('../assets/img/logo.svg', { className: 'header__logo', w: 106, h: 64 }) %>
+  <img class="header__logo-bw" src="../assets/img/logo-bw.png" alt="" />
+  <div class="header__right">
+    <button class="header__stat-btn"></button>
+    <button class="header__loupe-btn"></button>
+    <div class="header__contacts">
+      <a class="header__phone" href="tel:+74991361718">+7 (499) 136-17-18</a>
+      <a class="header__email" href="mailto:info@monevac.ru">info@monevac.ru</a>
+    </div>
+    <button class="header__request btn btn_primary">Оставить заявку</button>
+  </div>
+</header>
