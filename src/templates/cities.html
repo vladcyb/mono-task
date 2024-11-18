@@ -15,7 +15,7 @@
           <% } %>
           <% if (city.name === 'Новосибирск') { %>
             <div>
-              Факс:
+              <span class="city-card__phone">Факс:</span>
               <% for(const fax of city.fax) { %>
                 <% const clearedFax = fax.replace(/[^+\d]/g, '') %>
                 <a class="city-card__phone" href="tel:<%=clearedFax%>"><%=
