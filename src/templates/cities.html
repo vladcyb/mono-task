@@ -1,0 +1,40 @@
+<section class="cities">
+  <% for(const city of cityCards) { %>
+    <div class="city-card cities__card">
+      <div>
+        <div class="city-card__name"><%= city.name %></div>
+        <div class="city-card__phones">
+          <% for(const phone of city.phones) { %>
+            <% const clearedPhone = phone.replace(/[^+\d]/g, '') %>
+            <a class="city-card__phone" href="tel:<%=clearedPhone%>"><%=
+              phone
+            %></a><%
+            if (city.name === 'Новосибирск'){ %>;<% } else { %>
+              <br />
+            <% } %>
+          <% } %>
+          <% if (city.name === 'Новосибирск') { %>
+            <div>
+              Факс:
+              <% for(const fax of city.fax) { %>
+                <% const clearedFax = fax.replace(/[^+\d]/g, '') %>
+                <a class="city-card__phone" href="tel:<%=clearedFax%>"><%=
+                  fax
+                %></a>;
+              <% } %>
+            </div>
+          <% } %>
+        </div>
+        <div class="city-card__address">
+          <%= city.address %>
+        </div>
+        <div>
+          <a class="city-card__address-link" href="#">Проложить маршрут</a>
+        </div>
+      </div>
+      <div class="city-card__schedule">
+        Режим работы: <%= city.schedule %>
+      </div>
+    </div>
+  <% } %>
+</section>

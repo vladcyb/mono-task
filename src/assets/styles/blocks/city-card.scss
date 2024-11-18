@@ -1,0 +1,48 @@
+@use '../utils/mixins' as mixins;
+
+.city-card {
+  background: var(--c-light-bg);
+  border-radius: 30px;
+  padding: 33px 22px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  @include mixins.media-sm {
+    border-radius: 14px;
+    padding: 33px 12px;
+  }
+}
+
+.city-card__name {
+  text-transform: uppercase;
+  font-family: RoadRadio, sans-serif;
+  font-size: 26px;
+}
+
+.city-card__phones {
+  margin-top: 15px;
+}
+
+.city-card__phone {
+  font-size: 19px;
+  line-height: 29px;
+  text-decoration: none;
+  color: var(--c-text-primary);
+}
+
+.city-card__address {
+  padding: 10px 0 10px;
+  font-size: 14px;
+  color: var(--c-text-secondary);
+}
+
+.city-card__address-link {
+  text-decoration: none;
+  color: var(--c-primary);
+  font-size: 14px;
+}
+
+.city-card__schedule {
+  font-size: 14px;
+}

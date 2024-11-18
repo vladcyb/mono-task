@@ -12,11 +12,11 @@
     <link rel="stylesheet" href="../assets/styles/index.scss" />
   </head>
   <body>
-    <!-- prettier-ignore -->
     <%- include('./header.html') %>
     <%- include('./page-header.html') %>
     <%- include('./contacts.html') %>
     <%- include('./map.html') %>
     <script src="../scripts/init-map.ts"></script>
+    <%- include('./cities.html', {cityCards}) %>
   </body>
 </html>

@@ -2,6 +2,7 @@ const path = require('path')
 const HtmlBundlerPlugin = require('html-bundler-webpack-plugin')
 const { CleanWebpackPlugin } = require('clean-webpack-plugin')
 const ESLintWebpackPlugin = require('eslint-webpack-plugin')
+const cityCards = require('./src/assets/data/city-cards.json')
 
 require('dotenv').config()
 
@@ -17,6 +18,7 @@ module.exports = {
       entry: {
         index: {
           import: './src/templates/index.html',
+          data: { cityCards },
         },
       },
       preprocessor: 'ejs',
