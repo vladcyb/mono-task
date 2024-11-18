@@ -10,13 +10,8 @@
   padding: 0 var(--content-padding-x);
 
   @include mixins.media-md {
-    //  padding: 0 28px;
     height: 65px;
   }
-  //
-  //@include mixins.media-sm {
-  //  padding: 0 16px;
-  //}
 }
 
 .header__left,

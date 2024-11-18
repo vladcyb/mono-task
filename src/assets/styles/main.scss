@@ -13,7 +13,7 @@
   /* colors */
   --c-primary: #bf2738;
   --c-hover: #cc2a3c;
-  --c-active: #991f2d;
+  --c-dark-red: #991f2d;
   --c-link: #f23147;
   --c-text-primary: #262633;
   --c-text-secondary: #797986;
@@ -42,10 +42,6 @@
 body {
   font-family: 'Golos Text', sans-serif;
   color: var(--c-text-primary);
-}
-
-button:not(:disabled) {
-  cursor: pointer;
 }
 
 h1,
