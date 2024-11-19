@@ -13,16 +13,23 @@ export function onContactsFormSubmit(event: SubmitEvent) {
   const validationResult = [
     validateField(nameField, 'input_has-error'),
     validateField(phoneField, 'input_has-error'),
-    validateField(textField, 'textarea_has-error'),
+    validateField(textField, 'input_has-error'),
     validateCheckbox(checkbox, 'contacts__checkbox-error_visible'),
   ]
 
   if (!validationResult.includes(false)) {
-    console.log({
-      name: nameField.value,
-      phone: phoneField.value,
-      textField: textField.value,
-    })
+    alert(
+      'Валидация прошла успешно: ' +
+        JSON.stringify(
+          {
+            name: nameField.value,
+            phone: phoneField.value,
+            text: textField.value,
+          },
+          null,
+          2
+        )
+    )
   }
 }
 

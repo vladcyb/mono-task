@@ -100,15 +100,15 @@
 
 .contacts__form-textarea-container {
   grid-column: 1 / span 2;
-}
-
-.contacts__form-textarea {
-  resize: none;
   margin-top: 8px;
 
   @include mixins.media-md {
     margin: 0;
   }
+}
+
+.contacts__form-textarea {
+  resize: none;
 }
 
 .contacts__checkbox-container {

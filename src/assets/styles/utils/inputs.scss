@@ -1,8 +1,7 @@
-@use '../utils/mixins';
-
 .input {
   display: flex;
   flex-direction: column;
+  position: relative;
 }
 
 .input__field {
@@ -11,13 +10,18 @@
   font-family: 'Golos Text', sans-serif;
   padding: 18px 20px;
   background: var(--c-light-bg);
-  border: 0;
+  border: 2px solid var(--c-light-bg);
   border-radius: 14px;
-  height: 52px;
+
+  &:hover,
+  &:focus {
+    background: var(--c-white);
+  }
 }
 
 .input_has-error .input__field {
-  background: rgba(from var(--c-primary) r g b / 12%);
+  background: rgba(191 39 56 / 12%);
+  border-color: transparent;
   color: var(--c-primary);
 }
 
@@ -28,38 +32,22 @@
   display: none;
 }
 
+.input__placeholder {
+  position: absolute;
+  left: 20px;
+  top: 20px;
+  height: 24px;
+  pointer-events: none;
+  color: var(--c-text-secondary);
+}
+
+.input_has-value .input__placeholder,
+.input_focused .input__placeholder {
+  top: 10px;
+  line-height: 12px;
+  font-size: 12px;
+}
+
 .input_has-error .input__error {
   display: block;
-}
-
-.textarea {
-  display: flex;
-  flex-direction: column;
-}
-
-.textarea__text {
-  font-size: 16px;
-  line-height: 24px;
-  font-family: 'Golos Text', sans-serif;
-  padding: 18px 20px;
-  background: var(--c-light-bg);
-  border: 0;
-  border-radius: 14px;
-  width: 100%;
-}
-
-.textarea__error {
-  font-size: 12px;
-  line-height: 18px;
-  color: var(--c-primary);
-  display: none;
-}
-
-.textarea_has-error .textarea__error {
-  display: block;
-}
-
-.textarea_has-error .textarea__text {
-  background: rgba(from var(--c-primary) r g b / 12%);
-  color: var(--c-primary);
 }
