@@ -98,8 +98,11 @@
   }
 }
 
-.contacts__form-textarea {
+.contacts__form-textarea-container {
   grid-column: 1 / span 2;
+}
+
+.contacts__form-textarea {
   resize: none;
   margin-top: 8px;
 
@@ -108,12 +111,23 @@
   }
 }
 
-.contacts__checkbox {
+.contacts__checkbox-container {
   grid-column: 1 / span 2;
 
   @include mixins.media-md {
     margin-top: 10px;
   }
+}
+
+.contacts__checkbox-error {
+  font-size: 12px;
+  line-height: 18px;
+  color: var(--c-primary);
+  display: none;
+}
+
+.contacts__checkbox-error_visible {
+  display: block;
 }
 
 .contacts__policy {

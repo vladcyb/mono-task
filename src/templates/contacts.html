@@ -50,23 +50,55 @@
       </dd>
     </dl>
   </div>
-  <form class="contacts__form">
+  <form class="contacts__form" id="contacts-form">
     <h2 class="contacts__form-title">Остались вопросы?</h2>
-    <input class="input contacts__form-name" placeholder="Ваше имя" />
-    <input class="input contacts__form-phone" placeholder="Ваш телефон" />
-    <textarea
-      class="textarea contacts__form-textarea"
-      rows="6"
-      placeholder="Ваше сообщение"
-    ></textarea>
-    <label class="checkbox contacts__checkbox">
-      <span class="checkbox__text contacts__checkbox-text">
-        Я подтверждаю свое согласие с политикой в отношении
-        <a class="contacts__policy" href="#">обработки персональных данных</a>
-      </span>
-      <input class="checkbox__input" type="checkbox" id="agree" />
-      <span class="checkbox__mark"></span>
-    </label>
+    <div class="input contacts__form-name">
+      <input
+        class="input__field"
+        placeholder="Ваше имя"
+        name="name"
+        id="contacts-name"
+      />
+      <div class="input__error">
+        Является обязательным полем
+      </div>
+    </div>
+    <div class="input contacts__form-phone">
+      <input
+        class="input__field"
+        placeholder="Ваш телефон"
+        name="phone"
+        id="contacts-phone"
+      />
+      <div class="input__error">
+        Является обязательным полем
+      </div>
+    </div>
+    <div class="textarea contacts__form-textarea-container">
+      <textarea
+        class="textarea__text contacts__form-textarea"
+        rows="6"
+        placeholder="Ваше сообщение"
+        name="text"
+        id="contacts-text"
+      ></textarea>
+      <div class="textarea__error">
+        Является обязательным полем
+      </div>
+    </div>
+    <div class="contacts__checkbox-container">
+      <label class="checkbox contacts__checkbox" id="checkbox-label">
+        <span class="checkbox__text contacts__checkbox-text">
+          Я подтверждаю свое согласие с политикой в отношении
+          <a class="contacts__policy" href="#">обработки персональных данных</a>
+        </span>
+        <input class="checkbox__input" type="checkbox" id="contacts-agree" />
+        <span class="checkbox__mark"></span>
+      </label>
+      <div class="contacts__checkbox-error" id="checkbox-error">
+        Соглашение является обязательным
+      </div>
+    </div>
     <button class="btn btn_primary contacts__submit">Задать&nbsp;вопрос</button>
   </form>
 </section>

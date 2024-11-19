@@ -1,6 +1,11 @@
 @use '../utils/mixins';
 
 .input {
+  display: flex;
+  flex-direction: column;
+}
+
+.input__field {
   font-size: 16px;
   line-height: 24px;
   font-family: 'Golos Text', sans-serif;
@@ -11,7 +16,28 @@
   height: 52px;
 }
 
+.input_has-error .input__field {
+  background: rgba(from var(--c-primary) r g b / 12%);
+  color: var(--c-primary);
+}
+
+.input__error {
+  font-size: 12px;
+  line-height: 18px;
+  color: var(--c-primary);
+  display: none;
+}
+
+.input_has-error .input__error {
+  display: block;
+}
+
 .textarea {
+  display: flex;
+  flex-direction: column;
+}
+
+.textarea__text {
   font-size: 16px;
   line-height: 24px;
   font-family: 'Golos Text', sans-serif;
@@ -19,4 +45,21 @@
   background: var(--c-light-bg);
   border: 0;
   border-radius: 14px;
+  width: 100%;
+}
+
+.textarea__error {
+  font-size: 12px;
+  line-height: 18px;
+  color: var(--c-primary);
+  display: none;
+}
+
+.textarea_has-error .textarea__error {
+  display: block;
+}
+
+.textarea_has-error .textarea__text {
+  background: rgba(from var(--c-primary) r g b / 12%);
+  color: var(--c-primary);
 }
