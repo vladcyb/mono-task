@@ -57,17 +57,20 @@
         class="input__field"
         name="name"
         id="contacts-name"
+        autocomplete="name"
       />
       <div class="input__placeholder">Ваше имя</div>
       <div class="input__error">
         Является обязательным полем
       </div>
     </div>
-    <div class="input contacts__form-phone">
+    <div class="input input_phone contacts__form-phone">
       <input
         class="input__field"
         name="phone"
         id="contacts-phone"
+        autocomplete="tel"
+        type="tel"
       />
       <div class="input__placeholder">Ваш телефон</div>
       <div class="input__error">
@@ -80,6 +83,7 @@
         rows="6"
         name="text"
         id="contacts-text"
+        autocomplete="off"
       ></textarea>
       <div class="input__placeholder">Ваше сообщение</div>
       <div class="input__error">
