@@ -22,6 +22,8 @@ jobs:
         run: npm install
 
       - name: Build the Static Site
+        env:
+          REACT_APP_API_URL: ${{ secrets.YANDEX_MAPS_TOKEN }}
         run: npm run build-prod
 
       - name: Deploy to GitHub Pages
